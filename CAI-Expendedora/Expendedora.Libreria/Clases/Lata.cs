@@ -7,11 +7,11 @@ namespace Expendedora.Libreria.Clases
         string nombre;
         string sabor;
         double precio;
-        double volumen;
+        int volumen;
         double precioPorLitro;
         int cantidad;
 
-        public Lata(string codigo, string nombre, string sabor, double precio, double volumen, int cantidad)
+        public Lata(string codigo, string nombre, string sabor, double precio, int volumen, int cantidad)
         {
             this.codigo = codigo;
             this.nombre = nombre;
@@ -43,6 +43,7 @@ namespace Expendedora.Libreria.Clases
         {
             this.cantidad--;
         }
+
 
         public string Codigo { get => codigo; }
         public string Nombre { get => nombre; }

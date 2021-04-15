@@ -6,23 +6,27 @@ using Expendedora.Libreria.Exceptions;
 
 namespace Expendedora.Libreria
 {
-    public class Expendedora
+    public class ExpendedoraMaq
     {
         List<Lata> latas = new List<Lata>();
         string proveedor;
         int capacidadMaxima;
-        int stock;
+        int productos;
         double dinero;
         bool encendida;
 
 
-        public Expendedora(string proveedor, int capacidadMaxima, double dinero)
+        public ExpendedoraMaq(string proveedor, int capacidadMaxima, double dinero)
         {
             this.proveedor = proveedor;
             this.capacidadMaxima = capacidadMaxima;
             this.dinero = dinero;
             encendida = false;
         }
+
+        public int Productos { get => productos; }
+        public string Dinero { get => "$" + dinero; }
+        public bool Encendida { get => encendida; }
 
 
         public string ListLatas
@@ -37,6 +41,20 @@ namespace Expendedora.Libreria
                 return resultado;
             }
         }
+
+        public string VerStock
+        {
+            get
+            {
+                string resultado = "";
+                foreach(Lata lata in latas)
+                {
+                    resultado += lata.Descripcion + "\n";
+                }
+                return resultado;
+            }
+        }
+
 
         public void VenderLata(string codigo, double pago, out double vuelto)
         {
@@ -68,12 +86,12 @@ namespace Expendedora.Libreria
 
         public void AddLata(Lata lata)
         {
-            if (stock < capacidadMaxima)
+            if (productos < capacidadMaxima)
             {
                 if (latas.SingleOrDefault(lat => lata.Codigo == lat.Codigo) == null)
                 {
                     latas.Add(lata);
-                    stock += lata.Cantidad;
+                    productos += lata.Cantidad;
                 } else
                 {
                     throw new CodigoExistenteException();
@@ -83,5 +101,15 @@ namespace Expendedora.Libreria
                 throw new CapacidadExcedidaException();
             }
         }
+
+        public void Encender()
+        {
+            encendida = true;
+        }
+        public void Apagar()
+        {
+            encendida = false;
+        }
+         
     }
 }

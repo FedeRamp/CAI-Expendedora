@@ -33,5 +33,22 @@ namespace Expendedora.Libreria.Helpers
             } while (entrada == "");
             return resultado;
         }
+
+        public static double pedirDouble(string mensaje)
+        {
+            string entrada = "";
+            double resultado;
+            do
+            {
+                Console.Write(mensaje);
+                entrada = Console.ReadLine();
+                if (!double.TryParse(entrada, out resultado))
+                {
+                    Console.WriteLine("No se ingreso un numero");
+                    entrada = "";
+                }
+            } while (entrada == "");
+            return resultado;
+        }
     }
 }
