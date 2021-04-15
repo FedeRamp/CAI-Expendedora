@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.809.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Expendedora.Console", "CAI-Expendedora\Expendedora.Console.csproj", "{0C103527-0F7A-416E-A2B1-B5C96C2DF6FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Expendedora.Libreria", "Expendedora.Libreria\Expendedora.Libreria.csproj", "{FE15E95F-4B7D-4C27-99EC-2E945D6A941D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|anycpu = Debug|anycpu
+		Release|anycpu = Release|anycpu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C103527-0F7A-416E-A2B1-B5C96C2DF6FC}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{0C103527-0F7A-416E-A2B1-B5C96C2DF6FC}.Debug|anycpu.Build.0 = Debug|anycpu
+		{0C103527-0F7A-416E-A2B1-B5C96C2DF6FC}.Release|anycpu.ActiveCfg = Release|anycpu
+		{0C103527-0F7A-416E-A2B1-B5C96C2DF6FC}.Release|anycpu.Build.0 = Release|anycpu
+		{FE15E95F-4B7D-4C27-99EC-2E945D6A941D}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{FE15E95F-4B7D-4C27-99EC-2E945D6A941D}.Debug|anycpu.Build.0 = Debug|Any CPU
+		{FE15E95F-4B7D-4C27-99EC-2E945D6A941D}.Release|anycpu.ActiveCfg = Release|Any CPU
+		{FE15E95F-4B7D-4C27-99EC-2E945D6A941D}.Release|anycpu.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {641390C0-24D0-4D34-852B-A8D7B5B4EC07}
+	EndGlobalSection
+EndGlobal

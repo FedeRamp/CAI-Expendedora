@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{0C103527-0F7A-416E-A2B1-B5C96C2DF6FC}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Expendedora.Libreria/Helpers/Validar.cs">
+    <Files>
+      <File FileName="CAI-Expendedora/Program.cs" Line="9" Column="1" />
+      <File FileName="Expendedora.Libreria/MyClass.cs" Line="7" Column="10" />
+      <File FileName="Expendedora.Libreria/Clases/Lata.cs" Line="1" Column="1" />
+      <File FileName="Expendedora.Libreria/Helpers/Validar.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CAI-Expendedora" expanded="True">
+            <Node name="Expendedora.Console" expanded="True" />
+            <Node name="Expendedora.Libreria" expanded="True">
+              <Node name="Helpers" expanded="True">
+                <Node name="Validar.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Expendedora.Libreria FirstBuild="True" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|anycpu" />
+  <MonoDevelop.Ide.ItemProperties.Expendedora.Console FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
