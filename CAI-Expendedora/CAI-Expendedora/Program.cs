@@ -16,11 +16,10 @@ namespace CAIExpendedora
             string encender = "";
             while (encender == "")
             {
-                Console.Clear();
                 if(expendedora.Encendida)
                 {
-                    
-                    
+                    MenuPrincipal();
+                    encender = "";
                 }
 
                 else
@@ -29,6 +28,7 @@ namespace CAIExpendedora
                     if (encender == "1")
                     {
                         expendedora.Encender();
+                        encender = "";
                     }
                     else
                     {
@@ -45,13 +45,14 @@ namespace CAIExpendedora
 
         public static void MenuPrincipal()
         {
-            string[] opciones = {"1. Ver productos disponibles",
-                                 "2. Agregar nuevo producto",
-                                 "3. Comprar producto",
-                                 "4. Mostrar balance",
-                                 "5. Mostrar stock" };
+            string[] opciones = {" Ver productos disponibles",
+                                 " Agregar nuevo producto",
+                                 " Comprar producto",
+                                 " Mostrar balance",
+                                 " Mostrar stock" };
             Menu menu = new Menu("Elija una opcion:", opciones);
-            switch (menu.elegir())
+            int opcion = menu.elegir();
+            switch (opcion)
             {
                 case 1:
                     MostrarProductos();
@@ -85,7 +86,20 @@ namespace CAIExpendedora
 
         private static void ComprarProducto()
         {
-            throw new NotImplementedException();
+            MostrarProductos();
+            string codigo = Validador.pedirString("Elige la que quieras");
+            double pago = Validador.pedirDouble("Ingrese su dinero");
+            double vuelto = 0;
+            try
+            {
+                Lata lata = expendedora.VenderLata(codigo, pago, out vuelto);
+                Console.WriteLine($"Vendido! {lata.Print}");
+                if (vuelto != 0) Console.WriteLine($"Su vuelto: {vuelto}");
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         private static void AgregarProducto()
@@ -94,10 +108,16 @@ namespace CAIExpendedora
             string nombre = Validador.pedirString("Ingresar nombre");
             string sabor = Validador.pedirString("Ingresar sabor");
             double precio = Validador.pedirDouble("Ingresar precio");
-            int volumen = Validador.pedirInt("Ingresar Volumen");
+            int volumen = Validador.pedirInt("Ingresar Volumen (en ml)");
             int cantidad = Validador.pedirInt("Ingresar Cantidad");
-            Lata lata = new Lata(codigo,nombre,sabor,precio,volumen,cantidad);
-            expendedora.AddLata(lata);
+            try
+            {
+                Lata lata = new Lata(codigo, nombre, sabor, precio, volumen, cantidad);
+                expendedora.AddLata(lata);
+            } catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         private static void MostrarProductos()

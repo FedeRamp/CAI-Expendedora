@@ -1,0 +1,6 @@
+/Users/fede/Documents/GitHub/CAI-Expendedora/CAI-Expendedora/Expendedora.Libreria/obj/Debug/Expendedora.Libreria.csprojAssemblyReference.cache
+/Users/fede/Documents/GitHub/CAI-Expendedora/CAI-Expendedora/Expendedora.Libreria/obj/Debug/Expendedora.Libreria.csproj.CoreCompileInputs.cache
+/Users/fede/Documents/GitHub/CAI-Expendedora/CAI-Expendedora/Expendedora.Libreria/bin/Debug/Expendedora.Libreria.dll
+/Users/fede/Documents/GitHub/CAI-Expendedora/CAI-Expendedora/Expendedora.Libreria/bin/Debug/Expendedora.Libreria.pdb
+/Users/fede/Documents/GitHub/CAI-Expendedora/CAI-Expendedora/Expendedora.Libreria/obj/Debug/Expendedora.Libreria.dll
+/Users/fede/Documents/GitHub/CAI-Expendedora/CAI-Expendedora/Expendedora.Libreria/obj/Debug/Expendedora.Libreria.pdb

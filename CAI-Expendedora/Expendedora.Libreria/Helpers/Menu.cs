@@ -4,13 +4,13 @@ namespace Expendedora.Libreria.Helpers
     public class Menu
     {
 
-        List<string> opciones = new List<string>();
+        string[] opciones;
         private string titulo;
 
         public Menu(string titulo, string[] opciones)
         {  //Constructor
             this.titulo = titulo;
-            this.opciones = opciones.ToList();
+            this.opciones = opciones;
         }
 
         public string print()
@@ -21,7 +21,7 @@ namespace Expendedora.Libreria.Helpers
             {
                 if (!isEmpty())
                 {
-                    for (int i = 0; i < opciones.Count; i++)
+                    for (int i = 0; i < opciones.Length; i++)
                     {
                         resultado += ("\t" + (i + 1) + ". " + opciones[i] + "\n");
                     }
@@ -36,27 +36,30 @@ namespace Expendedora.Libreria.Helpers
 
         public int elegir()
         {
+            
             try
             {
                 int opcionElegida = Validador.pedirInt(print());
-                string opcion = opciones[opcionElegida - 1]; //Esto me va a tirar el error 
+                string opcion = opciones[opcionElegida - 1]; //Esto me va a tirar el error
+                Console.Clear();
                 return opcionElegida;
             }
             catch (IndexOutOfRangeException iore)
             {
                 Console.WriteLine("No existe esa opcion");
             }
+
             return -1;
         }
 
         public bool isEmpty()
         {
-            if (this.opciones.Count == 0)
+            if (this.opciones.Length == 0)
             {
                 throw new Exception("No hay opciones para mostrar");
             }
-            return !(this.opciones.Count > 0);
+            return !(this.opciones.Length > 0);
         }
     }
-}
+
 }

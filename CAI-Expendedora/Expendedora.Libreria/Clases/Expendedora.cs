@@ -56,7 +56,7 @@ namespace Expendedora.Libreria
         }
 
 
-        public void VenderLata(string codigo, double pago, out double vuelto)
+        public Lata VenderLata(string codigo, double pago, out double vuelto)
         {
             Lata lata = latas.SingleOrDefault(l => l.Codigo == codigo);
             if (lata != null)
@@ -68,6 +68,7 @@ namespace Expendedora.Libreria
                         dinero += pago;
                         vuelto = pago - lata.Precio;
                         lata.Vender();
+                        return lata;
                     }
                     else
                     {
@@ -86,7 +87,7 @@ namespace Expendedora.Libreria
 
         public void AddLata(Lata lata)
         {
-            if (productos < capacidadMaxima)
+            if ((productos+lata.Cantidad) < capacidadMaxima)
             {
                 if (latas.SingleOrDefault(lat => lata.Codigo == lat.Codigo) == null)
                 {

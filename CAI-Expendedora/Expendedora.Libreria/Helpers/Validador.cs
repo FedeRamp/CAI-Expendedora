@@ -11,7 +11,7 @@ namespace Expendedora.Libreria.Helpers
             {
                 Console.WriteLine(mensaje);
                 resultado = Console.ReadLine();
-                if (resultado == "") Console.WriteLine("Algo, no vacío");
+                if (resultado == "") Console.WriteLine("No se ingreso nada");
             } while (resultado == "");
 
             return resultado;
@@ -23,7 +23,7 @@ namespace Expendedora.Libreria.Helpers
             int resultado;
             do
             {
-                Console.Write(mensaje);
+                Console.WriteLine(mensaje);
                 entrada = Console.ReadLine();
                 if (!int.TryParse(entrada, out resultado))
                 {
@@ -40,7 +40,7 @@ namespace Expendedora.Libreria.Helpers
             double resultado;
             do
             {
-                Console.Write(mensaje);
+                Console.WriteLine(mensaje);
                 entrada = Console.ReadLine();
                 if (!double.TryParse(entrada, out resultado))
                 {
