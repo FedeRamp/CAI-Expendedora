@@ -11,7 +11,9 @@ namespace CAIExpendedora
 
         public static void Main(string[] args)
         {
-            expendedora = new ExpendedoraMaq("Expendelux", 500, 500);
+            //expendedora = new ExpendedoraMaq("Expendelux", 500, 500);
+            //Cambiar por la de abajo para testear
+            expendedora = Test.MaquinaPrueba();
 
             string encender = "";
             while (encender == "")

@@ -39,6 +39,7 @@
     <Compile Include="Exceptions\DineroInsuficienteException.cs" />
     <Compile Include="Exceptions\CapacidadExcedidaException.cs" />
     <Compile Include="Helpers\Menu.cs" />
+    <Compile Include="Helpers\Test.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Clases\" />
